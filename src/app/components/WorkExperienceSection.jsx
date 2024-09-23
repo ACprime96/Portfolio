@@ -1,5 +1,5 @@
 "use client";
-import { jobExperience } from './job-data.js'
+import { jobExperience } from './job-data'
 import { motion } from "framer-motion";
 
 const listItemVariants = {
@@ -22,7 +22,7 @@ export const WorkExperienceSection = () => {
                     <ol className="relative border-s border-gray-200 dark:border-gray-700">
                         {jobExperience.map((job, i) => {
                             return (
-                                <li className="mb-5 ms-10">
+                                <li className="mb-5 ms-10" key={i}>
                                     <span className="absolute flex items-center justify-center w-10 h-10  bg-blue-100 rounded-full -start-5 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
                                         <img src={job.image} alt="arrow" className="rounded-full w-10 h-10" />
                                     </span>
@@ -42,7 +42,7 @@ export const WorkExperienceSection = () => {
                                         <div className="pb-3">
                                             {job.description.map((desc, index) => {
                                                 return (
-                                                    <p className="mb-1 ml-2 text-base font-normal text-gray-500 dark:text-gray-400">{" - " + desc}</p>
+                                                    <p key={index}  className="mb-1 ml-2 text-base font-normal text-gray-500 dark:text-gray-400" >{" - " + desc}</p>
                                                 )
                                             })}
                                         </div>
