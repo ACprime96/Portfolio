@@ -20,7 +20,7 @@ export const MyProjectsSection = () => {
         },
         {
             title: "True Cost Predictor",
-            description: "Devised a microservice architecture based application to store and retrieve images based on contextual keywords. Deployed to run on Google Kubernetes Engine, with flask serving the means to interact with the application, RabbitMQ acting as the message broker, and Cloud SQL, Redis as the storage and caching mechanism. The application is also set to scale horizontally based on CPU utilization.",
+            description: "In this project, I leveraged technologies such as Python, NumPy, Pandas, JavaScript, Scikit-learn, and Flask to create a predictive model for rail car hire costs. By preprocessing historical car hire rates, I trained a Random Forest Regression model that achieved an accuracy of 78%. To make the predictions accessible, I developed a Flask web application that showcases car hire cost predictions, aiming to reduce overpayments and streamline rebate claims per transaction. Additionally, I led a team of four in the Network & Logistics Virtual Hackathon hosted by Wabtec Corporation, where we earned first place. Our model contributed to a 40% reduction in overpayments, significantly enhancing cash flow management for the business.",
             // url: "https://www.youtube.com/embed/DLgby897HYg?si=fmSPz2pCvMiUcbS1",
             techs: ["Python", "NumPy", "Pandas", "React", "Scikit-learn", "Flask"],
             image: "/images/projects/1.png",
@@ -28,7 +28,7 @@ export const MyProjectsSection = () => {
         },
         {
             title: "Soft Braille",
-            description: "Devised a microservice architecture based application to store and retrieve images based on contextual keywords. Deployed to run on Google Kubernetes Engine, with flask serving the means to interact with the application, RabbitMQ acting as the message broker, and Cloud SQL, Redis as the storage and caching mechanism. The application is also set to scale horizontally based on CPU utilization.",
+            description: "The Soft Braille project focused on developing assistive applications for educating the visually impaired, utilizing Python, PyQt, Pytesseract, and OpenCV.I created an open- source desktop application that converts scanned school textbook pages into braille output, reducing printing costs per page by 80 %.By leveraging the Pytesseract OCR engine and OpenCV for edge detection, the application facilitates effective learning for visually impaired students.Recognized at the Smart India Hackathon, it received an award for Inspiration and is currently in use at Mathru Blind School in Bengaluru, India.",
             // url: "https://www.youtube.com/embed/DLgby897HYg?si=fmSPz2pCvMiUcbS1",
             techs: ["Python", "PyQt", "Pytesseract", "OpenCV"],
             image: "/images/projects/2.png",

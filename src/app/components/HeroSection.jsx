@@ -28,8 +28,8 @@ const HeroSection = () => {
                 1000,
                 "Full Stack Dev",
                 1000,
-                // "AI/ML Researcher",
-                // 1000,
+                "AI/ML Researcher",
+                1000,
               ]}
               wrapper="span"
               speed={50}
