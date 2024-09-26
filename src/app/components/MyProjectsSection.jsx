@@ -4,7 +4,7 @@ export const MyProjectsSection = () => {
     const projectsData = [
         {
             title: "Hyperparameter Tuning as a Service (HypTaaS)",
-            description: "Devised a microservice architecture based application to store and retrieve images based on contextual keywords. Deployed to run on Google Kubernetes Engine, with flask serving the means to interact with the application, RabbitMQ acting as the message broker, and Cloud SQL, Redis as the storage and caching mechanism. The application is also set to scale horizontally based on CPU utilization.",
+            description: "HypTaaS is a web application developed as the final project for the course CSCI 5253 - Data Center Scale Computing. The platform automates hyperparameter optimization for deep learning models, enabling users to upload datasets and select pre-trained models from Hugging Face. Utilizing a grid search approach, HypTaaS fine-tunes multiple configurations simultaneously on Google Cloud Platform (GCP), streamlining the model development process. The application features a React-based interface with a Flask backend and employs a modular architecture integrating Minio for storage, Redis for caching, and Kafka for messaging. This architecture enhances scalability and facilitates rapid experimentation, making HypTaaS applicable in various domains, including healthcare, finance, and natural language processing, improving performance through efficient hyperparameter tuning.",
             url: "https://www.youtube.com/embed/DLgby897HYg?si=fmSPz2pCvMiUcbS1",
             techs: ["React", "Kafka", "Docker", "Kubernetes", "PyTorch"],
             image: "/images/projects/1.png",
@@ -12,7 +12,7 @@ export const MyProjectsSection = () => {
         },
         {
             title: "Arxiv Insanity",
-            description: "Devised a microservice architecture based application to store and retrieve images based on contextual keywords. Deployed to run on Google Kubernetes Engine, with flask serving the means to interact with the application, RabbitMQ acting as the message broker, and Cloud SQL, Redis as the storage and caching mechanism. The application is also set to scale horizontally based on CPU utilization.",
+            description: "Arxiv Insanity is a web application developed as the final project for the course ATLS 5214 - Big Data Architecture. The platform aims to revolutionize the literature review process by simplifying how researchers track and explore relationships between academic papers. Using a combination of GoLang, Neo4j, and React, the application implements an interactive citation network that allows users to effortlessly navigate primary research papers and discover related works. The system leverages Terraform for scalable infrastructure deployment on Google Cloud, ensuring efficient handling of large datasets. The project automates the extraction of citation data using the S2AG API and visualizes the complex connections between papers, making the research process more intuitive and streamlined.",
             url: "https://www.youtube.com/embed/Q3QZI4MUjJc?si=O10PdHgFtFzVlSA9",
             techs: ["React", "Go", "MongoDB", "Neo4j", "Redis", "Docker", "Kubernetes", "Terraform"],
             image: "/images/projects/1.png",
@@ -32,7 +32,7 @@ export const MyProjectsSection = () => {
             // url: "https://www.youtube.com/embed/DLgby897HYg?si=fmSPz2pCvMiUcbS1",
             techs: ["Python", "PyQt", "Pytesseract", "OpenCV"],
             image: "/images/projects/2.png",
-            // gitUrl: "https://github.com/ArxivInsanity",
+            gitUrl: "https://github.com/ACprime96/SoftBraille",
         }
     ];
   return (
