@@ -3,8 +3,14 @@ import React, { useState } from 'react'
 
 export const MyProjectsSection = () => {
 
-    const [isExpanded, setIsExpanded] = useState(false);
+    const [expandedStates, setExpandedStates] = useState({});
 
+    const toggleExpand = (index) => {
+        setExpandedStates((prevState) => ({
+            ...prevState,
+            [index]: !prevState[index], // Toggle the state for the specific index
+        }));
+    };
 
     const MAX_LENGTH = 100;
     const projectsData = [
@@ -63,14 +69,14 @@ export const MyProjectsSection = () => {
                             <div className='flex-1'>
                                 <h3 className='mb-4 text-2xl font-bold  text-white'>{project.title}</h3>
                                 <div>
-                                    <p className={`text-gray-400 ${isExpanded ? "" : "line-clamp-2 md:line-clamp-none"}`}>
+                                    <p className={`text-gray-400 ${expandedStates[index] ? "" : "line-clamp-2 md:line-clamp-none"}`}>
                                         {project.description}
                                     </p>
                                     <span
                                         className="text-blue-500 md:hidden cursor-pointer ml-2 block"
-                                        onClick={() => setIsExpanded(!isExpanded)}
+                                        onClick={() => toggleExpand(index)}
                                     >
-                                        {isExpanded ? "show less" : "show more"}
+                                        {expandedStates[index] ? "show less" : "show more"}
                                     </span>
                                 </div>
 
