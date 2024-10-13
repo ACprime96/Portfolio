@@ -198,7 +198,10 @@ function Skills() {
                     Technologies
                 </h2>
 
-                <div className="mx-auto py-5 flex gap-2">
+                <div className=" py-5 flex gap-2 overflow-x-scroll " style={{
+                    scrollbarWidth: "none", /* Firefox */
+                    msOverflowStyle: "none", /* Internet Explorer and Edge */
+                }}>
                     <button
                         className={`rounded-full border-2 px-6 py-3 text-xl cursor-pointer ${tab === 1 ? "text-white border-blue-500"
                             : "text-[#ADB7BE] border-slate-600 hover:border-white"}`}
@@ -227,9 +230,9 @@ function Skills() {
                     whileInView="visible"
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}>    */}
-                    {tabs[tab - 1]}
+                {tabs[tab - 1]}
                 {/* </motion.div> */}
-                
+
             </div>
         </div>
     );
