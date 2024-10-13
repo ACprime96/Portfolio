@@ -42,11 +42,11 @@ export const MyProjectsSection = () => {
         }
     ];
     return (
-        <div className='md:w-full' id="projects" >
+        <div className='w-full' id="projects" >
             <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
                 Projects
             </h2>
-            <div className='px-[90px]'>
+            <div className='md:px-[90px]'>
                 {projectsData.map((project, index) => {
                     const isOdd = (index + 1) % 2 !== 0;
                     return (
