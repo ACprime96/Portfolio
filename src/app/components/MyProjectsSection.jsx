@@ -1,6 +1,12 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 
 export const MyProjectsSection = () => {
+
+    const [isExpanded, setIsExpanded] = useState(false);
+
+
+    const MAX_LENGTH = 100;
     const projectsData = [
         {
             title: "Hyperparameter Tuning as a Service (HypTaaS)",
@@ -35,37 +41,48 @@ export const MyProjectsSection = () => {
             gitUrl: "https://github.com/ACprime96/SoftBraille",
         }
     ];
-  return (
-      <div className='w-full'>
-          <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-              Projects
-          </h2>
-          <div className='px-[90px]'>
-              {projectsData.map((project, index) => {
-                  const isOdd = (index + 1) % 2 !== 0;
-                  return (
-                      <div key={index} className={`flex ${isOdd ? 'flex-row' : 'flex-row-reverse'} gap-8 mb-24`}>
-                          {project.url ? (
-                                  
-                              <iframe
-                                  className='flex-1 w-1/2 rounded-xl aspect-video'
-                                  src={project.url}
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowFullScreen
-                              ></iframe> ) : (
-                              <img src={project.image} alt="project" className="flex-1 w-1/2 rounded-xl shadow-blue-800 shadow-lg" />)}
-                          <div className='flex-1'>
-                              <h3 className='mb-4 text-2xl font-bold'>{project.title}</h3>
-                              <p className='text-gray-400'>{project.description}</p>
-                              {project.gitUrl ? (<a href={project.gitUrl} target="_blank">
-                                  <img src="/images/skills/github.png" className='mt-4 w-6 hover:scale-110' />
-                              </a>) : null}
-                          </div>
-                      </div>
-                  );
-              })}
-          </div>
-      </div>
-  )
+    return (
+        <div className='md:w-full' id="projects" >
+            <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+                Projects
+            </h2>
+            <div className='px-[90px]'>
+                {projectsData.map((project, index) => {
+                    const isOdd = (index + 1) % 2 !== 0;
+                    return (
+                        <div key={index} className={`flex ${isOdd ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 mb-24 flex-col`}>
+                            {project.url ? (
+                                <iframe
+                                    className='flex-1 md:w-1/2 w-full rounded-xl aspect-video'
+                                    src={project.url}
+                                    title="YouTube video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>) : (
+                                <img src={project.image} alt="project" className="flex-1 md:w-1/2 w-full rounded-xl shadow-blue-800 shadow-lg" />)}
+                            <div className='flex-1'>
+                                <h3 className='mb-4 text-2xl font-bold  text-white'>{project.title}</h3>
+                                <div>
+                                    <p className={`text-gray-400 ${isExpanded ? "" : "line-clamp-2 md:line-clamp-none"}`}>
+                                        {project.description}
+                                    </p>
+                                    <span
+                                        className="text-blue-500 md:hidden cursor-pointer ml-2 block"
+                                        onClick={() => setIsExpanded(!isExpanded)}
+                                    >
+                                        {isExpanded ? "show less" : "show more"}
+                                    </span>
+                                </div>
+
+
+                                {project.gitUrl ? (<a href={project.gitUrl} target="_blank">
+                                    <img src="/images/skills/github.png" className='mt-4 w-6 hover:scale-110' />
+                                </a>) : null}
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    )
 }
