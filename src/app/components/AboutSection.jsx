@@ -104,7 +104,8 @@ const AboutSection = () => {
             looking to expand my knowledge and skill set. I am a team player and
             I am excited to work with others to create amazing applications.
           </p>
-          <div className="flex flex-row justify-start mt-8 overflow-x-auto " style={{
+          <div className="flex flex-row justify-start mt-8 overflow-x-auto "
+           style={{
             scrollbarWidth: "none", /* Firefox */
             msOverflowStyle: "none", /* Internet Explorer and Edge */
           }}>
