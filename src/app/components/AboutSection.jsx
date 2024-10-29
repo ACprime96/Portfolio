@@ -30,7 +30,11 @@ const TAB_DATA = [
     id: "teaching",
     content: (
       <ul style={{ listStyleType: 'square', paddingLeft: '1rem' }}>
-        <li>Fall 2024 - CSCI 2270 Data Structures, Teaching Assistant</li>
+        <li>
+          <a href="https://www.coursicle.com/colorado/professors/Aditya+Chandra/" target="_blank" className="text-sky-500 underline">
+            Fall 2024 - CSCI 2270 Data Structures, Teaching Assistant
+          </a>
+        </li>
         <li>Spring 2024 - CSCI 1300 Starting Computin, Teaching Assistant</li>
         <li>Fall 2023 - CSCI 1300 Starting Computing, Teaching Assistant</li>
         <li>Spring 2023 - CSCI 1300 Starting Computing, Teaching Assistant</li>
@@ -44,9 +48,8 @@ const TAB_DATA = [
     content: (
       <ul style={{ listStyleType: 'square', paddingLeft: '1rem' }}>
         <li>AWS Cloud Practitioner (in progress)</li>
-        <li>AWS Solutions Architect Associate (in progress)</li>
         <li>AWS Developer Associate (in progress)</li>
-        <li>Certified Kubernetes Application Developer (in progress)</li>
+        <li>AWS Solutions Architect Associate (in progress)</li>
       </ul>
     ),
   },
@@ -55,27 +58,31 @@ const TAB_DATA = [
     id: "publications",
     content: (
       <ul style={{ listStyleType: 'square', paddingLeft: '1rem' }}>
-        <li>Media Framing through the Lens of Event-Centric Narratives, WNU 2024</li>
+        <li>
+          <a href="https://arxiv.org/abs/2410.03151" target="_blank" className="text-sky-500 underline">
+            Media Framing through the Lens of Event-Centric Narratives, Workshop paper EMNLP 2024
+          </a>
+        </li>
         <li>
           <a href="https://aclanthology.org/R19-1068/" target="_blank" className="text-sky-500 underline">
             Study on Unsupervised Statistical Machine Translation for Backtranslation, RANLP 2019
           </a>
         </li>
-      </ul>
+      </ul >
     ),
   },
-  {
-    title: "Awards",
+{
+  title: "Awards",
     id: "awards",
-    content: (
-      <ul style={{ listStyleType: 'square', paddingLeft: '1rem' }}>
-        <li>3rd place in AWS Hackathon hosted by CU Boulder CS Department, Feb 2024</li>
-        <li>1st place in Network & Logistics Virtual Hackathon hosted by Wabtec Corporation, Nov 2021</li>
-        <li>Award for Pursuing Excellence in 2021 Q1 Network and Logistics India Recognition, May 2021</li>
-        <li>Award for Inspiration at Smart India Hackathon under Ministry of Social Justice and Empowerment, Mar 2018</li>
-        <li>Special Jury Award at ITC Infotech Codeathon (iTech), Jul 2017</li>
-      </ul>
-    ),
+      content: (
+        <ul style={{ listStyleType: 'square', paddingLeft: '1rem' }}>
+          <li>3rd place in AWS Hackathon hosted by CU Boulder CS Department, Feb 2024</li>
+          <li>1st place in Network & Logistics Virtual Hackathon hosted by Wabtec Corporation, Nov 2021</li>
+          <li>Award for Pursuing Excellence in 2021 Q1 Network and Logistics India Recognition, May 2021</li>
+          <li>Award for Inspiration at Smart India Hackathon under Ministry of Social Justice and Empowerment, Mar 2018</li>
+          <li>Special Jury Award at ITC Infotech Codeathon (iTech), Jul 2017</li>
+        </ul>
+      ),
   },
 ];
 
@@ -105,10 +112,10 @@ const AboutSection = () => {
             I am excited to work with others to create amazing applications.
           </p>
           <div className="flex flex-row justify-start mt-8 overflow-x-auto "
-           style={{
-            scrollbarWidth: "none", /* Firefox */
-            msOverflowStyle: "none", /* Internet Explorer and Edge */
-          }}>
+            style={{
+              scrollbarWidth: "none", /* Firefox */
+              msOverflowStyle: "none", /* Internet Explorer and Edge */
+            }}>
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
