@@ -47,7 +47,7 @@ const HeroSection = () => {
               Hire Me
             </Link>
             <a
-              href="/Aditya_Chandra_Resume_2024.pdf"
+              href="/Aditya_Chandra_Resume.pdf"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-400 to-blue-800 hover:bg-slate-800 text-white mt-3"
               target="_blank"
             >
@@ -65,7 +65,7 @@ const HeroSection = () => {
         >
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
-              src="/images/hero-image.png"
+              src="/images/yosemite.jpg"
               alt="hero image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               width={400}

@@ -28,6 +28,11 @@ const achievementsList = [
     value: "3",
     postfix: "+",
   },
+  {
+    metric: "LC",
+    value: "200",
+    postfix: "+",
+  }
 ];
 
 const AchievementsSection = () => {
