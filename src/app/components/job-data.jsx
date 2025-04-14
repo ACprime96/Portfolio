@@ -1,9 +1,8 @@
 export const jobExperience = [
   {
     id: 4,
-    title: "Machine Leaarning Engineer",
-    company:
-      "",
+    title: "Machine Learning Engineer",
+    company:"Virufy, Sunnyvale, CA, US",
     image: "/virufy_logo.jpeg",
     date: "February 2024 - Present",
     description: [
