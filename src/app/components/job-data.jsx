@@ -4,7 +4,7 @@ export const jobExperience = [
     title: "Machine Learning Engineer",
     company:"Virufy, Sunnyvale, CA, US",
     image: "/virufy_logo.jpeg",
-    date: "February 2024 - Present",
+    date: "February 2025 - Present",
     description: [
       "Engineered scalable serverless ML pipeline on AWS (Lambda, Glue, S3), preprocessing 10k+ audio samples for feature extraction.",
       "Designed a real-time feature store with DynamoDB enabling sub-1ms fetch for COVID detection  model training and inference.",
