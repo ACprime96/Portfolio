@@ -47,9 +47,12 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul style={{ listStyleType: 'square', paddingLeft: '1rem' }}>
-        <li>AWS Cloud Practitioner (in progress)</li>
+        <li>
+          <a href="https://www.credly.com/badges/2c2337bb-edfc-49ab-92fd-bfcb335e93a7" target="_blank" className="text-sky-500 underline">
+            AWS Certified AI Practitioner
+          </a>
+        </li>
         <li>AWS Developer Associate (in progress)</li>
-        <li>AWS Solutions Architect Associate (in progress)</li>
       </ul>
     ),
   },

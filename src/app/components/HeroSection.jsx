@@ -37,7 +37,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Dedicated Software Engineer with over three years of experience building high-performance full-stack web applications.
+            Software Engineer with 3+ years at GE Transportation, building large-scale SaaS platforms in Java/Spring Boot. Designed fault-tolerant systems for managing full contract lifecycles, powering $1M+ in daily revenue and pricing automation for Fortune 500 railroad clients.
           </p>
           <div>
             <Link

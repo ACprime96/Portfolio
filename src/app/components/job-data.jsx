@@ -1,5 +1,17 @@
 export const jobExperience = [
   {
+    id: 4,
+    title: "Machine Leaarning Engineer",
+    company:
+      "",
+    image: "/virufy_logo.jpeg",
+    date: "February 2024 - Present",
+    description: [
+      "Engineered scalable serverless ML pipeline on AWS (Lambda, Glue, S3), preprocessing 10k+ audio samples for feature extraction.",
+      "Designed a real-time feature store with DynamoDB enabling sub-1ms fetch for COVID detection  model training and inference.",
+    ],
+  },
+  {
     id: 3,
     title: "Full Stack Developer",
     company:
@@ -18,11 +30,11 @@ export const jobExperience = [
     image: "/GE.png",
     date: "July 2019 - July 2022",
     description: [
-      "Spearheaded the modernization of a legacy application by decoupling the monolith into 5 microservices, enhancing maintainability and boosting performance by 30%.",
-      "Fortified application security by implementing TLS encryption for Oracle and MongoDB and eliminating 30+ OWASP vulnerabilities, cutting data breach risks by 40%.",
-      "Optimized the ETL data pipeline by refining Elasticsearch queries, reducing wildcard searches, and removing redundant aggregations, improving aggregation speed by 20%.",
-      "Led end-to-end feature development as the primary contributor, improving data modeling, UI, and backend to achieve a 15% performance boost, earning the 2021 Q1 Pursuing Excellence Award.",
-      "Collaborated with cross-functional teams across time zones to implement SSO-based access to our application suite, enhancing security and streamlining access for over 500 users across 10 organizations.",
+      "Won 2021 Q1 Pursuing Excellence Award for leading end-to-end development of contract lifecycle management features in RailConnect platform, enabling first-to-market capabilities for Fortune 500 railroad companies.",
+      "Architected a proof-of-concept modernization of legacy monolith into 5 domain-driven microservices using Spring Boot and PostgreSQL, demonstrating 30% performance improvement and securing approval for platform-wide implementation.",
+      "Optimized Elasticsearch query performance by implementing custom analyzers and reducing wildcard searches, achieving sub-second contract lookups and 40% faster aggregation across 1000+ daily transactions.",
+      "Developed 20+ RESTful APIs using Spring MVC and JPA repositories for contract lifecycle management, integrating with third-party approval systems through custom endpoints and handled asynchronous status updates.",
+      "Spearheaded innovative ML price prediction solution using Random Forest regression on 100,000+ historical data points, cutting annual rebate costs by $300,000; won company-wide hackathon among 100+ teams.",
     ],
   },
   {
@@ -32,9 +44,10 @@ export const jobExperience = [
     image: "/GE.png",
     date: "February 2019 - July 2019",
     description: [
-      "Accelerated dashboard performance by 33% by migrating to Reactive Microservices architecture, reducing latency and enabling real-time processing of high-volume data streams.",
-      "Reduced database bloat by 25% with a scheduled cleanup script for deduplication and added data integrity checks for future updates, resulting in 15% improvement in QA efficiency and faster testing cycles.",
-      "Boosted team productivity by 40% by configuring Docker with soft volumes on Windows, resolving persistent mounting issues, and eliminating frequent development downtimes.",
+      "Automated customer onboarding process through PL/SQL scripts, achieving 90-second setup time and 70% faster support resolution.",
+      "Built 5 + reactive REST APIs with Spring WebFlux to stream real- time railcar data, enabling efficient filtering and pagination.",
+      "Optimized React / Redux dashboard with lazy loading, pagination, and virtualized lists for real - time railcar data visualization.",
+      "Implemented multi - stage Docker deployments with Kubernetes, enabling seamless scaling across five production environments."
     ],
   },
 ];
