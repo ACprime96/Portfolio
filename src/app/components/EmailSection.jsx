@@ -51,10 +51,13 @@ const EmailSection = () => {
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           {" "}
-          I&apos;m currently looking for new opportunities, my inbox is always
-          open. Whether you have a question or just want to say hi, I&apos;ll
-          try my best to get back to you!
+          Based in Salt Lake City, Utah. Reach out to talk about distributed
+          systems, data infrastructure, backend engineering, or a potential
+          collaboration.
         </p>
+        <a href="mailto:aditya.c.gowda@gmail.com" className="inline-block text-sky-400 hover:underline break-all mb-4">
+          aditya.c.gowda@gmail.com
+        </a>
         <div className="socials flex flex-row gap-2">
           <a href="https://github.com/ACprime96" target="_blank">
             <Image src={GithubIcon} alt="Github Icon" />

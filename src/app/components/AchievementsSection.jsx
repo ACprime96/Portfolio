@@ -11,39 +11,34 @@ const AnimatedNumbers = dynamic(
 
 const achievementsList = [
   {
-    metric: "Technologies",
-    value: "30",
+    metric: "Years of Experience",
+    value: "4",
     postfix: "+",
   },
   {
-    metric: "Projects",
-    value: "25",
+    metric: "Less Average Batch Processing Time",
+    value: "71",
+    postfix: "%",
   },
   {
-    metric: "Awards",
-    value: "5",
+    metric: "Reports Validated",
+    value: "540",
   },
   {
-    metric: "Years",
-    value: "3",
-    postfix: "+",
-  },
-  {
-    metric: "LC",
-    value: "200",
-    postfix: "+",
+    metric: "Publications",
+    value: "2",
   }
 ];
 
 const AchievementsSection = () => {
   return (
     <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-      <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
+      <div className="sm:border-[#33353F] sm:border rounded-md p-8 grid grid-cols-2 lg:grid-cols-4 items-center gap-8">
         {achievementsList.map((achievement, index) => {
           return (
             <div
               key={index}
-              className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
+              className="flex flex-col items-center justify-center text-center"
             >
               <h2 className="text-white text-4xl font-bold flex flex-row">
                 <AnimatedNumbers

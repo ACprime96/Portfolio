@@ -12,21 +12,22 @@ export const MyProjectsSection = () => {
         }));
     };
 
-    const MAX_LENGTH = 100;
     const projectsData = [
         {
             title: "Hyperparameter Tuning as a Service (HypTaaS)",
-            description: "HypTaaS is a web application developed as the final project for the course CSCI 5253 - Data Center Scale Computing. The platform automates hyperparameter optimization for deep learning models, enabling users to upload datasets and select pre-trained models from Hugging Face. Utilizing a grid search approach, HypTaaS fine-tunes multiple configurations simultaneously on Google Cloud Platform (GCP), streamlining the model development process. The application features a React-based interface with a Flask backend and employs a modular architecture integrating Minio for storage, Redis for caching, and Kafka for messaging. This architecture enhances scalability and facilitates rapid experimentation, making HypTaaS applicable in various domains, including healthcare, finance, and natural language processing, improving performance through efficient hyperparameter tuning.",
+            date: "December 2023",
+            description: "Parallelized hyperparameter grid search across 30 GPU nodes on GCP, reducing runtime from 3 hours to 12 minutes. Kafka job replay sustained over 99.9% job success across 50+ models. Built with Kubernetes, PyTorch, and FastAPI to support scalable model experimentation.",
             url: "https://www.youtube.com/embed/DLgby897HYg?si=fmSPz2pCvMiUcbS1",
-            techs: ["React", "Kafka", "Docker", "Kubernetes", "PyTorch"],
+            techs: ["GCP", "Kubernetes", "Kafka", "PyTorch", "FastAPI"],
             image: "/images/projects/1.png",
             gitUrl: "https://github.com/HyperParameter-Tuning-as-a-Service",
         },
         {
             title: "Arxiv Insanity",
-            description: "Arxiv Insanity is a web application developed as the final project for the course ATLS 5214 - Big Data Architecture. The platform aims to revolutionize the literature review process by simplifying how researchers track and explore relationships between academic papers. Using a combination of GoLang, Neo4j, and React, the application implements an interactive citation network that allows users to effortlessly navigate primary research papers and discover related works. The system leverages Terraform for scalable infrastructure deployment on Google Cloud, ensuring efficient handling of large datasets. The project automates the extraction of citation data using the S2AG API and visualizes the complex connections between papers, making the research process more intuitive and streamlined.",
+            date: "May 2023",
+            description: "Built an interactive citation-network explorer over 10K+ papers using the S2AG API, with sub-second search. Used Go, Neo4j, and React to help researchers explore relationships between papers, and provisioned the application on GCP with Terraform.",
             url: "https://www.youtube.com/embed/Q3QZI4MUjJc?si=O10PdHgFtFzVlSA9",
-            techs: ["React", "Go", "MongoDB", "Neo4j", "Redis", "Docker", "Kubernetes", "Terraform"],
+            techs: ["Go", "Neo4j", "React", "Terraform", "GCP"],
             image: "/images/projects/1.png",
             gitUrl: "https://github.com/ArxivInsanity",
         },
@@ -61,28 +62,35 @@ export const MyProjectsSection = () => {
                                 <iframe
                                     className='flex-1 md:w-1/2 w-full rounded-xl aspect-video'
                                     src={project.url}
-                                    title="YouTube video player"
+                                    title={`${project.title} demo`}
+                                    loading="lazy"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen
                                 ></iframe>) : (
                                 <img src={project.image} alt="project" className="flex-1 md:w-1/2 w-full rounded-xl shadow-blue-800 shadow-lg" />)}
                             <div className='flex-1'>
                                 <h3 className='mb-4 text-2xl font-bold  text-white'>{project.title}</h3>
+                                {project.date && <p className="mb-3 text-sm text-gray-400">{project.date}</p>}
                                 <div>
                                     <p className={`text-gray-400 ${expandedStates[index] ? "" : "line-clamp-2 md:line-clamp-none"}`}>
                                         {project.description}
                                     </p>
-                                    <span
+                                    <button
+                                        type="button"
+                                        aria-expanded={Boolean(expandedStates[index])}
                                         className="text-blue-500 md:hidden cursor-pointer ml-2 block"
                                         onClick={() => toggleExpand(index)}
                                     >
                                         {expandedStates[index] ? "show less" : "show more"}
-                                    </span>
+                                    </button>
                                 </div>
-
-
-                                {project.gitUrl ? (<a href={project.gitUrl} target="_blank">
-                                    <img src="/images/skills/github.png" className='mt-4 w-6 hover:scale-110' />
+                                <ul className="flex flex-wrap gap-2 mt-4" aria-label={`${project.title} technologies`}>
+                                    {project.techs.map((tech) => (
+                                        <li key={tech} className="rounded-full border border-slate-600 px-3 py-1 text-sm text-gray-300">{tech}</li>
+                                    ))}
+                                </ul>
+                                {project.gitUrl ? (<a href={project.gitUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} on GitHub`}>
+                                    <img src="/images/skills/github.png" alt="GitHub" className='mt-4 w-6 hover:scale-110' />
                                 </a>) : null}
                             </div>
                         </div>
