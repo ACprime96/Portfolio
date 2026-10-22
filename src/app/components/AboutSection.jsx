@@ -20,7 +20,7 @@ const TAB_DATA = [
         <ul style={{ listStyleType: 'square', paddingLeft: '1.5rem' }}>
           <li>Degree: Bachelor of Engineering in Information Science and Engineering</li>
           <li>Graduation Date: June 2019</li>
-          <li>CGPA: 9.33 / 10</li>
+          <li>GPA: 4.0</li>
         </ul>
       </ul>
     ),
@@ -30,12 +30,13 @@ const TAB_DATA = [
     id: "teaching",
     content: (
       <ul style={{ listStyleType: 'square', paddingLeft: '1rem' }}>
+        <li>Graduate Teaching Assistant for four semesters: led recitations and drafted exams and homework for 600+ students in C++ and Data Structures.</li>
         <li>
           <a href="https://www.coursicle.com/colorado/professors/Aditya+Chandra/" target="_blank" className="text-sky-500 underline">
             Fall 2024 - CSCI 2270 Data Structures, Teaching Assistant
           </a>
         </li>
-        <li>Spring 2024 - CSCI 1300 Starting Computin, Teaching Assistant</li>
+        <li>Spring 2024 - CSCI 1300 Starting Computing, Teaching Assistant</li>
         <li>Fall 2023 - CSCI 1300 Starting Computing, Teaching Assistant</li>
         <li>Spring 2023 - CSCI 1300 Starting Computing, Teaching Assistant</li>
         <li>Nov 2018 - Served as facilitator for Google Developer Student club and conducted hands-on workshop on Node.js for juniors</li>
@@ -49,10 +50,9 @@ const TAB_DATA = [
       <ul style={{ listStyleType: 'square', paddingLeft: '1rem' }}>
         <li>
           <a href="https://www.credly.com/badges/2c2337bb-edfc-49ab-92fd-bfcb335e93a7" target="_blank" className="text-sky-500 underline">
-            AWS Certified AI Practitioner
+            AWS Certified AI Practitioner (2025)
           </a>
         </li>
-        <li>AWS Developer Associate (in progress)</li>
       </ul>
     ),
   },
@@ -62,13 +62,13 @@ const TAB_DATA = [
     content: (
       <ul style={{ listStyleType: 'square', paddingLeft: '1rem' }}>
         <li>
-          <a href="https://arxiv.org/abs/2410.03151" target="_blank" className="text-sky-500 underline">
-            Media Framing through the Lens of Event-Centric Narratives, Workshop paper EMNLP 2024
+          <a href="https://aclanthology.org/2024.wnu-1.15/" target="_blank" rel="noopener noreferrer" className="text-sky-500 underline">
+            Media Framing through the Lens of Event-Centric Narratives — EMNLP 2024 (WNU workshop)
           </a>
         </li>
         <li>
           <a href="https://aclanthology.org/R19-1068/" target="_blank" className="text-sky-500 underline">
-            Study on Unsupervised Statistical Machine Translation for Backtranslation, RANLP 2019
+            Unsupervised Statistical Machine Translation for Backtranslation — RANLP 2019
           </a>
         </li>
       </ul >
@@ -103,16 +103,18 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about" >
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/pic.jpeg" width={600} height={600} className="rounded-xl" />
+        <Image src="/images/pic.jpeg" alt="Aditya Chandra" width={600} height={600} className="rounded-xl" />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+            I build reliable data infrastructure and backend systems. At Goldman
+            Sachs, I work on batch and event-driven pipelines for institutional
+            financial reporting, from ingestion and enrichment to warehousing and
+            archival. My work spans Java performance optimization, Python data
+            reconciliation, Snowflake migrations, and production reliability.
+            I also build MCP servers and agent skills that help teams trace data
+            lineage and investigate incidents. Previously, I built ML infrastructure
+            at Virufy and contract-management services at GE Transportation.
           </p>
           <div className="flex flex-row justify-start mt-8 overflow-x-auto "
             style={{
