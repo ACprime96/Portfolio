@@ -16,17 +16,20 @@ const achievementsList = [
     postfix: "+",
   },
   {
-    metric: "Less Average Batch Processing Time",
+    metric: "APIs Built",
+    value: "20",
+    postfix: "+",
+  },
+  {
+    metric: "Less Batch Processing Time",
     value: "71",
     postfix: "%",
   },
   {
-    metric: "Reports Validated",
-    value: "540",
-  },
-  {
-    metric: "Publications",
-    value: "2",
+    metric: "Annual Cost Savings",
+    value: "300",
+    prefix: "$",
+    postfix: "K",
   }
 ];
 
@@ -41,6 +44,7 @@ const AchievementsSection = () => {
               className="flex flex-col items-center justify-center text-center"
             >
               <h2 className="text-white text-4xl font-bold flex flex-row">
+                {achievement.prefix}
                 <AnimatedNumbers
                   includeComma
                   animateToNumber={parseInt(achievement.value)}
